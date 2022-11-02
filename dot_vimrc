@@ -1,0 +1,43 @@
+:set runtimepath+=~/.vim
+
+call plug#begin('~/.vim/plugged')
+
+" enable mouse mode
+set mouse=a
+
+" enable line numbers
+set number
+
+" always display vim statusline
+set laststatus=2
+
+filetype plugin indent on
+" show existing tab with 4 spaces width
+set tabstop=4
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+" On pressing tab, insert 4 spaces
+set expandtab
+
+" Plugins
+" https://github.com/junegunn/vim-plug
+call plug#begin('~/.vim/plugged')
+" native vimscript statusline plugin inspired by powerline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'editorconfig/editorconfig-vim'
+
+" Mouse behavior
+set mouse=a
+call plug#end()
+
+" custom fonts
+let g:airline_powerline_fonts=1
+" syntax highlight theme
+colorscheme bubblegum-256-dark
+
+" " airline theme
+let g:airline_theme='bubblegum'
+
+" Initialize plugin system
+call plug#end()
